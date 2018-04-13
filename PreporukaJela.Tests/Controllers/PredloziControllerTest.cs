@@ -1,29 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PreporukaJela;
 using PreporukaJela.Controllers;
 
 namespace PreporukaJela.Tests.Controllers
 {
     [TestClass]
-    public class HomeControllerTest
+    public class PredloziControllerTest
     {
         [TestMethod]
         public void Index()
         {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
+            PredloziController controller = new PredloziController();
             ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
             Assert.IsNotNull(result);
         }
-
     }
 }

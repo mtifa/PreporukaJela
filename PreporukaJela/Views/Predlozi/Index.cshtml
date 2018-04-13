@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Prijedlog jela";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Prijedlog jela</h2>
+
+
+<button class="btn btn-outline-info">@Html.ActionLink("Predloži jelo", "Index", "Predlozi")</button>
+<hr />
+<div id="vorslag" class="alert alert-dismissible alert-primary">
+    @(new HtmlString(ViewData["vorslag"].ToString()))
+</div>

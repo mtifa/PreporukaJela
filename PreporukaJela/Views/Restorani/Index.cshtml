@@ -1,0 +1,38 @@
+﻿@model IEnumerable<PreporukaJela.Models.Restoran>
+
+@{
+    ViewBag.Title = "Restorani";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Restorani</h2>
+<button class="btn btn-outline-info">@Html.ActionLink("Dodaj novi", "Create", new { @class = "nav-link" })</button>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+    </tr>
+}
+
+</table>
+<button class="btn btn-outline-info">@Html.ActionLink("Idi na jela", "Index", "Jeloes")</button>
